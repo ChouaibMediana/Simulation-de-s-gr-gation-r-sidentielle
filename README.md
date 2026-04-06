@@ -89,9 +89,30 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 
 ## Résultats typiques
 
-- Avec un **seuil faible** (≤ 30%) : les agents se mélangent facilement, peu de ségrégation.
-- Avec un **seuil élevé** (≥ 70%) : une forte ségrégation apparaît même si aucun agent ne veut une ségrégation totale.
-- Avec un **`deplacement-max` faible** : certains agents restent bloqués et la simulation se termine avant l'équilibre.
+### Cas 1 — Seuil Élevé (Image 1)
+- **Seuil de satisfaction :** 80 %
+- **Limite maximale de déplacement :** 70
+- **Méthode d'échantillonnage :** Homogène
+- **Résultat :** Moins de 25 % de satisfaction des agents
+- **Résultat :** La distribution spatiale est restée aléatoire malgré la limite de 70 déplacements — aucun regroupement ni convergence observés
+
+### Cas 2 — Seuil Faible (Image 2)
+- **Seuil de satisfaction :** 15 %
+- **Méthode d'échantillonnage :** Homogène
+- **Résultat :** Taux de satisfaction de 100 % atteint en moins de 4 ticks de simulation
+- **Résultat :** La distribution des couleurs est restée largement aléatoire ; aucune ségrégation spatiale significative n'a émergé en raison du faible seuil de tolérance
+
+### Cas 3 — Seuil Optimal (Image 3)
+- **Seuil de satisfaction :** 40 %
+- **Densité maximale (approx.) :** ~20
+- **Résultat :** 100 % de satisfaction des agents atteint avec le nombre minimal de déplacements parmi toutes les configurations testées
+- **Résultat :** Les résultats sont restés robustes même à densité maximale ; des regroupements spatiaux et des patterns de ségrégation clairs ont émergé
+
+---
+
+## Analyse Globale
+
+Un seuil de satisfaction modéré de 40 % produit une ségrégation spatiale forte — un résultat classique du modèle de Schelling. Les agents n'excluent pas activement l'autre groupe ; ils cherchent simplement à éviter de se retrouver en minorité extrême dans leur voisinage immédiat. Même lorsque les agents font preuve d'une certaine tolérance à la diversité (acceptant un statut minoritaire jusqu'à 40–50 %), le système se stabilise presque invariablement dans un état de ségrégation prononcée, démontrant la robustesse de ce résultat émergent pour une large gamme de configurations de préférences individuelles.
 
 ---
 
