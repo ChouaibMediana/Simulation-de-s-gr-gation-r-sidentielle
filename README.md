@@ -89,7 +89,7 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 
 ## Résultats typiques
 
-### Cas 1 — Seuil Élevé (Image 1)
+### Cas 1 — Seuil Élevé 
 ![Image 1 - Seuil élevé](seuil_eleve.png)
 - **Seuil de satisfaction :** 80 %
 - **Limite maximale de déplacement :** 70
@@ -97,14 +97,14 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 - **Résultat :** Moins de 25 % de satisfaction des agents
 - **Résultat :** La distribution spatiale est restée aléatoire malgré la limite de 70 déplacements — aucun regroupement ni convergence observés
 
-### Cas 2 — Seuil Faible (Image 2)
+### Cas 2 — Seuil Faible 
 ![Image 2 - Seuil bas](seuil_bas.png)
 - **Seuil de satisfaction :** 15 %
 - **Méthode d'échantillonnage :** Homogène
 - **Résultat :** Taux de satisfaction de 100 % atteint en moins de 4 ticks de simulation
 - **Résultat :** La distribution des couleurs est restée largement aléatoire ; aucune ségrégation spatiale significative n'a émergé en raison du faible seuil de tolérance
 
-### Cas 3 — Seuil Optimal (Image 3)
+### Cas 3 — Seuil Optimal 
 ![Image 3 - Seuil optimal](seuil_optimal.png)
 - **Seuil de satisfaction :** 40 %
 - **Densité maximale (approx.) :** ~20
