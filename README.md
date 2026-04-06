@@ -90,6 +90,7 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 ## Résultats typiques
 
 ### Cas 1 — Seuil Élevé (Image 1)
+![Image 1 - Seuil élevé](results/screenshots/seuil_eleve.png)
 - **Seuil de satisfaction :** 80 %
 - **Limite maximale de déplacement :** 70
 - **Méthode d'échantillonnage :** Homogène
@@ -97,12 +98,14 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 - **Résultat :** La distribution spatiale est restée aléatoire malgré la limite de 70 déplacements — aucun regroupement ni convergence observés
 
 ### Cas 2 — Seuil Faible (Image 2)
+![Image 2 - Seuil bas](results/screenshots/seuil_bas.png)
 - **Seuil de satisfaction :** 15 %
 - **Méthode d'échantillonnage :** Homogène
 - **Résultat :** Taux de satisfaction de 100 % atteint en moins de 4 ticks de simulation
 - **Résultat :** La distribution des couleurs est restée largement aléatoire ; aucune ségrégation spatiale significative n'a émergé en raison du faible seuil de tolérance
 
 ### Cas 3 — Seuil Optimal (Image 3)
+![Image 3 - Seuil optimal](results/screenshots/seuil_optimal.png)
 - **Seuil de satisfaction :** 40 %
 - **Densité maximale (approx.) :** ~20
 - **Résultat :** 100 % de satisfaction des agents atteint avec le nombre minimal de déplacements parmi toutes les configurations testées
@@ -111,8 +114,8 @@ L'agent libère sa case actuelle et cherche une case vide. Il préfère les case
 ---
 
 ## Analyse Globale
-
-Un seuil de satisfaction modéré de 40 % produit une ségrégation spatiale forte — un résultat classique du modèle de Schelling. Les agents n'excluent pas activement l'autre groupe ; ils cherchent simplement à éviter de se retrouver en minorité extrême dans leur voisinage immédiat. Même lorsque les agents font preuve d'une certaine tolérance à la diversité (acceptant un statut minoritaire jusqu'à 40–50 %), le système se stabilise presque invariablement dans un état de ségrégation prononcée, démontrant la robustesse de ce résultat émergent pour une large gamme de configurations de préférences individuelles.
+![Image 4 - Histogramme de satisfaction](results/screenshots/histogramme_optimal.png)
+Un seuil de satisfaction modéré de 40 % produit une ségrégation spatiale forte . Les agents n'excluent pas activement l'autre groupe ; ils cherchent simplement à éviter de se retrouver en minorité extrême dans leur voisinage immédiat. Même lorsque les agents font preuve d'une certaine tolérance à la diversité (acceptant un statut minoritaire jusqu'à 40–50 %), le système se stabilise presque invariablement dans un état de ségrégation prononcée, démontrant la robustesse de ce résultat émergent pour une large gamme de configurations de préférences individuelles.
 
 ---
 
